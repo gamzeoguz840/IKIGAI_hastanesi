@@ -1,0 +1,128 @@
+﻿@{ 
+    IKIGAI_hastanesi.Models.doktorlogin doktorlogin = (IKIGAI_hastanesi.Models.doktorlogin)Session["doktorlogin"];
+}
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> IKIGAI </title>
+
+    <link rel="shortcut icon" href="~/Content/assets/images/fav.jpg">
+    <link rel="stylesheet" href="~/Content/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="~/Content/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/assets/css/style.css" />
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <!-- ################# Header Starts Here#######################--->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 left-item">
+                        <ul>
+                            <li><i class="fas fa-envelope-square"></i> ikigai@hospital.com</li>
+                            <li><i class="fas fa-phone-square"></i> 0380 556 00 00</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-block right-item">
+                        <ul>
+                            <p style="font-size:15px; font-weight:bold; color:white; border:1px solid white; padding:7px; margin:7px;"> @doktorlogin.doktorad @doktorlogin.doktorsoyad  <a href="/home/index"style="font-size:15px; font-weight:bold; color:white; border:1px solid white; padding:7px;"> ÇIKIŞ </a></p> 
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="nav-head" class="header-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 nav-img">
+                        <a href="/doktor/index" target="_self">   <img src="/Content/assets/images/new.jpg" alt="" style="width:70%;"> </a>
+                        <a data-toggle="collapse" data-target="#menu" href="#menu"><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                    </div>
+                    <div id="menu" class="col-md-9 d-none d-md-block nav-item">
+                        <ul>
+                            <li>@Html.ActionLink("Anasayfa", "index", "doktor")</li>
+
+                            <li>@Html.ActionLink("Hasta Bilgileri Giriş", "records", "doktor")</li>
+
+                            <li>@Html.ActionLink("Hastayı Ekle", "addpattient1", "doktor")</li>
+
+                            <li>@Html.ActionLink("Hastayı Listele", "listpattient1", "doktor")</li>
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+
+
+
+    @RenderBody()
+
+
+    <!-- ################# Footer Starts Here#######################--->
+    <!-- ################# Our Team Starts Here#######################--->
+    <!--  ************************* Page Title Starts Here ************************** -->
+    <div class="page-nav no-margin row">
+        <div class="container">
+            <div class="row">
+                <h2></h2>
+                <ul>
+                    <li> <a href=""><i class=""></i> </a></li>
+                    <li><i class=""></i> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ######## Page  Title End ####### -->
+
+
+    <div class="copy">
+        <div class="container">
+            <a href="#">2022 &copy; TÜM HAKLARI SINIRLIDIR | Designed and Developed by GEU SOFT &nbsp;</a>
+
+            <span>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-pinterest-p"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+            </span>
+        </div>
+
+    </div>
+
+</body>
+
+<script src="~/Content/assets/js/jquery-3.2.1.min.js"></script>
+<script src="~/Content/assets/js/popper.min.js"></script>
+<script src="~/Content/assets/js/bootstrap.min.js"></script>
+<script src="~/Content/assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+<script src="~/Content/assets/js/script.js"></script>
+
+
+
+</html>

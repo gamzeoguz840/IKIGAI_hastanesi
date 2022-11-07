@@ -1,0 +1,80 @@
+﻿@model IKIGAI_hastanesi.Models.doktorlogin
+@{
+    ViewBag.Title = "doctorlogin";
+    Layout = "~/Views/shared/_LayoutPage1.cshtml";
+}
+
+
+
+<!-- ################# Our Team Starts Here#######################--->
+<!--  ************************* Page Title Starts Here ************************** -->
+<div class="page-nav no-margin row">
+    <div class="container">
+        <div class="row">
+            <h2>IKIGAI HASTANESİ</h2>
+            <ul>
+                <li> <a href="/home/index"><i class="fas fa-home"></i> Anasayfa</a></li>
+                <li><i class="fas fa-angle-double-right"></i> Doktor Giriş </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- ######## Page  Title End ####### -->
+<!-- Main content -->
+<section class="content">
+    <div>
+        <div class="container">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-6">
+                    <!-- general form elements -->
+                    <div class="card card-primary" style="margin:auto;">
+                        <div class="card-header">
+                            <h3 class="card-title">Doktor Giriş</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form action ="/home/doctorlogin" method="post">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">TC Numara:</label>
+                                    @Html.TextBoxFor(x => x.doktortc)
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1"> Şifre: </label>
+                                    < @Html.PasswordFor(x => x.doktorsifre)
+                                </div>
+
+
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary">Giriş</button>
+                                    <div style="float: right; border: 2px solid white; padding: 7px; background: #a0cc44; color: white; font-weight: bold; ">
+                                        <a href="/doktor/doctorsignin" style="text-align:right; color:azure; font-weight:bold; "> Doktor Kayıt</a>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                            <p>@ViewBag.hata</p>
+</div>
+                <!-- /.card -->
+                <!-- ################# Footer Starts Here#######################--->
+
+
+                <div
+                        <div class="container-fluid">
+                            <div class="row">
+                                <p> &nbsp;</p>
+                                <p> &nbsp;</p>
+                                <p> &nbsp;</p>
+                                <p> &nbsp;</p>
+                                <p> &nbsp;</p>
+                                <p> &nbsp;</p>
+                                <p> &nbsp;</p>
+                                <p> &nbsp;</p>
+                                <p> &nbsp;</p>
+
+                            </div>
+                        </div>
+                    </div>

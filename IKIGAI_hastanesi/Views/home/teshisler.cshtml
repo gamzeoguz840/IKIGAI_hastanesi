@@ -1,0 +1,108 @@
+﻿@model List<IKIGAI_hastanesi.Models.hastasonuc>
+@{
+    ViewBag.Title = "teshisler";
+    Layout = "~/Views/shared/_LayoutPage1.cshtml";
+}
+
+
+<!-- ################# Our Team Starts Here#######################--->
+<!--  ************************* Page Title Starts Here ************************** -->
+<div class="page-nav no-margin row">
+    <div class="container">
+        <div class="row">
+            <h2>IKIGAI HASTANESİ</h2>
+            <ul>
+                <li> <a href="/home/index"><i class="fas fa-home"></i> Anasayfa</a></li>
+                <li><i class="fas fa-angle-double-right"></i> Kayıtlar</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- ######## Page  Title End ####### -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Hasta Detay Kayıtları</h3>
+
+                <div class="card-tools">
+                    <form action="/home/teshisler" method="post">
+                        <div class="input-group input-group-sm" style="width: 150px;">
+                            <input type="text" name="arananlar" class="form-control float-right" placeholder="Ara">
+
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-default">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>Sıra No</th>
+                            <th>Ad Soyad</th>                      
+                            <th>Doğum Yılı</th>
+                            <th>Bölüm</th>
+                            <th>Doktor</th>
+                            <th>Teşhis</th>
+                            <th>Verilen İlaç</th>
+                            
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @{
+
+                            if (Model != null && Model.Count > 0)
+                            {
+
+                                foreach (var hastasonuc in Model)
+                                {
+                                    <tr>
+                                        <td>@hastasonuc.hastasonucid</td>
+                                        <td>@hastasonuc.hastaad @hastasonuc.hastasoyad</td>
+                                       <td>@hastasonuc.hastadogum</td>
+                                        <td>@hastasonuc.hastabolum</td>
+                                        <td>@hastasonuc.hastadoktor</td>
+                                        <td>@hastasonuc.hastateshis</td>
+                                        <td>@hastasonuc.hastailac</td>
+                                        
+
+                                       
+
+
+
+
+                                    </tr>
+
+
+                                }
+                            }
+
+
+
+                        }
+
+
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+</div>
+
+
+

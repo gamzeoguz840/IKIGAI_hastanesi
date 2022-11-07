@@ -1,0 +1,117 @@
+﻿
+@model IKIGAI_hastanesi.Models.hastasonuc
+@{
+    ViewBag.Title = "tahlil";
+    Layout = "~/Views/shared/_doktorLayout.cshtml";
+}
+
+<div class="page-nav no-margin row">
+    <div class="container">
+        <div class="row">
+            <h2>IKIGAI HASTANESİ</h2>
+            <ul>
+                <li> <a href="/home/index"><i class="fas fa-home"></i> Anasayfa</a></li>
+                <li><i class="fas fa-angle-double-right"></i> Hasta Detaylar </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- ######## Page  Title End ####### -->
+<!-- Main content -->
+<section class="content">
+    <div>
+        <div class="container">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-6">
+                    <!-- general form elements -->
+                    <div class="card card-primary" style="margin:auto;">
+                        <div class="card-header">
+                            <h3 class="card-title">Hasta Detaylar</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+
+                        <form action="/doktor/tahlil" method="post">
+
+                            <div class="form-group">
+                                <label for="exampleInputPassword1"> Ad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+                                @Html.TextBoxFor(x => x.hastaad)
+
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Soyad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</label>
+                                @Html.TextBoxFor(x => x.hastasoyad)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1"> TC:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+                                @Html.TextBoxFor(x => x.hastatc)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1"> Doğum Yılı: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </label>
+                                @Html.TextBoxFor(x => x.hastadogum)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1"> Hasta Bölüm:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                @Html.TextBoxFor(x => x.hastabolum)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1"> Hasta Doktor:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                @Html.TextBoxFor(x => x.hastadoktor)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1"> Hasta Teşhis:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+                                @Html.TextBoxFor(x => x.hastateshis)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1"> Verilen İlaç:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+                                @Html.TextBoxFor(x => x.hastailac)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1"> Tahlil:&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                @Html.TextBoxFor(x => x.lab)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1"> Ameliyat:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                @Html.TextBoxFor(x => x.ameliyat)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1"> Tahlil Ücreti:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</label>
+                                @Html.TextBoxFor(x => x.ucretlab)
+                            </div>
+                            <label for="exampleInputPassword1"> Ameliyat Ücreti:&nbsp;</label>
+                            @Html.TextBoxFor(x => x.ucreta)
+                    </div>
+
+
+
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Detay Ekle </button>
+                        <div style="float: right; border: 2px solid white; padding: 7px; background: #a0cc44; color: white; font-weight: bold; ">
+                            <a href="/doktor/allpattient" style="text-align:right; color:azure; font-weight:bold; "> Tümünü Göster </a>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+
+                </div>
+
+
+
+                <div class="container-fluid">
+                    <div class="">
+                        <p> &nbsp;</p>
+                        <p> &nbsp;</p>
+                        <p> &nbsp;</p>
+                        <p> &nbsp;</p>
+                        <p> &nbsp;</p>
+                        <p> &nbsp;</p>
+                        <p> &nbsp;</p>
+                        <p> &nbsp;</p>
+                        <p> &nbsp;</p>
+
+                    </div>
+                </div>
+            </div>
